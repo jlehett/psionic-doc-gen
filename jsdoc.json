@@ -28,6 +28,7 @@
         "tutorials": "./fixtures/tutorials"
     },
     "templates": {
+        "search": true,
         "better-docs": {
             "name": "Sample Documentation"
         }

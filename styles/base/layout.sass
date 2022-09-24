@@ -20,7 +20,7 @@ body
   height: $main-nav-height
   @include until($desktop)
     height: $main-nav-height-mobile
-  
+
 #main
   height: 100%
   display: flex
@@ -39,10 +39,10 @@ body
     border-right: 1px solid $border
     height: 100%
     overflow: auto
-    
+
     &.tutorials
       width: 320px
-  
+
   & > .core
     padding: 28px
     height: 100%
@@ -54,7 +54,7 @@ body
       background: $white
       padding: 40px
       border-radius: 4px
-      box-shadow: 0 0 40px 0 rgba(115,134,160,0.24)
+      box-shadow: 0 0 40px 0 $shadow
   & > .side-nav
     width: 240px
     padding: 40px 20px
@@ -63,4 +63,3 @@ body
     height: 100%
     border-left: 1px solid $border
     overflow: auto
-  

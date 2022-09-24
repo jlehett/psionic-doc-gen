@@ -33,32 +33,5 @@ gulp.task('js', () =>
     .pipe(gulp.dest('static/scripts'))
 )
 
-gulp.task('docs', (cb) => exec(`cd .. && ${DOCS_COMMAND}`, cb))
-
-gulp.task('watch', function () {
-  gulp.watch('styles/**/*.sass', gulp.series(['sass', 'docs']))
-  gulp.watch('scripts/**/*.js', gulp.series(['js', 'docs']))
-  gulp.watch('tmpl/**/*.tmpl', gulp.series(['docs']))
-  gulp.watch('publish.js', gulp.series(['docs']))
-  if (process.env.DOCS) {
-    const array = [
-      ...process.env.DOCS.split(','),
-      ...process.env.DOCS.split(',').map(src => '!' + src.replace('**/*', 'node_modules/**/*'))
-    ]
-    console.log(array)
-    gulp.watch(array, gulp.series(['docs']))
-  }
-})
-
-gulp.task('sync', () => {
-  browserSync.init({
-    server: {
-      baseDir: DOCS_OUTPUT
-    }
-  });
-
-  return gulp.watch(`${DOCS_OUTPUT}/*`, gulp.series([browserSync.reload]))
-})
-
-gulp.task('default', gulp.series(['sass', 'js', 'docs', gulp.parallel(['watch', 'sync'])]))
+gulp.task('default', gulp.series(['sass', 'js']))
 

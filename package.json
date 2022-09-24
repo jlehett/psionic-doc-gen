@@ -6,7 +6,7 @@
   "main": "publish.js",
   "scripts": {
     "gulp": "./node_modules/.bin/gulp",
-    "test": "mocha --recursive './*spec.js' './typescript/*spec.js'",
+    "test": "npm run gulp && npm run build && npm run docs",
     "build": "babel src --out-dir lib",
     "docs": "jsdoc -c jsdoc.json",
     "release": "semantic-release"
