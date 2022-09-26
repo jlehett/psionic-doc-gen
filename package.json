@@ -1,8 +1,8 @@
 {
-  "name": "better-docs",
-  "version": "2.7.2",
+  "name": "psionic-doc-gen",
+  "version": "2.7.3",
   "description": "JSdoc theme",
-  "repository": "github:SoftwareBrothers/better-docs",
+  "repository": "github:jlehett/psionic-doc-gen",
   "main": "publish.js",
   "scripts": {
     "gulp": "./node_modules/.bin/gulp",

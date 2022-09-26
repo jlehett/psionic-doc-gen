@@ -33,5 +33,5 @@ gulp.task('js', () =>
     .pipe(gulp.dest('static/scripts'))
 )
 
-gulp.task('default', gulp.series(['sass', 'js']))
+gulp.task('default', gulp.series(['sass', 'js']));
 
